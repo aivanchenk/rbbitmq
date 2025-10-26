@@ -1,0 +1,6 @@
+* activation of management console 
+    https://www.rabbitmq.com/management.html
+    
+* management console is at 
+    http://localhost:15672 , 
+    default login is guest:guest
