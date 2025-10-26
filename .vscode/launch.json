@@ -23,5 +23,16 @@
 			"console": "externalTerminal",
 			"stopAtEntry": false
 		},
+		{
+			"name": "Farm",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build-Farm",
+			"program": "${workspaceFolder}/Farm/bin/Debug/net9.0/Farm.dll",
+			"args": [],
+			"cwd": "${workspaceFolder}/Farm",
+			"console": "externalTerminal",
+			"stopAtEntry": false
+		},
 	]
 }

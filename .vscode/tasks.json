@@ -25,5 +25,17 @@
 			],
 			"problemMatcher": "$msCompile"
 		},
+		{
+			"label": "build-Farm",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build",
+				"${workspaceFolder}/Farm/Farm.csproj",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"problemMatcher": "$msCompile"
+		},
 	]
 }
