@@ -34,5 +34,27 @@
 			"console": "externalTerminal",
 			"stopAtEntry": false
 		},
+		{
+			"name": "Food",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build-Food",
+			"program": "${workspaceFolder}/Food/bin/Debug/net9.0/Food.dll",
+			"args": [],
+			"cwd": "${workspaceFolder}/Food",
+			"console": "externalTerminal",
+			"stopAtEntry": false
+		},
+		{
+			"name": "Water",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build-Water",
+			"program": "${workspaceFolder}/Water/bin/Debug/net9.0/Water.dll",
+			"args": [],
+			"cwd": "${workspaceFolder}/Water",
+			"console": "externalTerminal",
+			"stopAtEntry": false
+		}
 	]
 }

@@ -4,9 +4,8 @@ using NLog;
 
 using Services;
 
-
 /// <summary>
-/// Water client.
+/// Food client.
 /// </summary>
 class Client
 {
@@ -16,9 +15,9 @@ class Client
 	Logger mLog = LogManager.GetCurrentClassLogger();
 
 	/// <summary>
-	/// Amount of water currently pending to be processed or delivered.
+	/// Amount of food currently pending to be processed or delivered.
 	/// </summary>
-	private double pendingWater = 0.0;
+	private double pendingFood = 0.0;
 
 	/// <summary>
 	/// Configures logging subsystem.
@@ -59,24 +58,24 @@ class Client
 
 				while (true)
 				{
-					// produce between -1.0 and 5.0 water
-					double producedWater = Math.Round(rnd.NextDouble() * 6.0 - 1.0, 1);
-					pendingWater += producedWater;
+					// produce between -1.0 and 5.0 food
+					double producedFood = Math.Round(rnd.NextDouble() * 6.0 - 1.0, 1);
+					pendingFood += producedFood;
 
-					var result = farmClient.SubmitWater((int)Math.Round(pendingWater));
+					var result = farmClient.SubmitFood((int)Math.Round(pendingFood));
 
 					if (result.IsAccepted)
 					{
-						mLog.Info($"Submitted {pendingWater} water.");
-						pendingWater = 0;
+						mLog.Info($"Submitted {pendingFood} food.");
+						pendingFood = 0;
 					}
 					else if (result.FailReason == "FarmSelling")
 					{
-						mLog.Info("Farm is selling; will retry with accumulated water.");
+						mLog.Info("Farm is selling; will retry with accumulated food.");
 					}
 					else
 					{
-						mLog.Warn($"Submission failed: {result.FailReason}. Keeping {pendingWater} to retry.");
+						mLog.Warn($"Submission failed: {result.FailReason}. Keeping {pendingFood} to retry.");
 					}
 
 					// wait between sending attempts
