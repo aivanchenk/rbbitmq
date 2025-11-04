@@ -3,12 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car", "Car\Car.csproj", "{D0968114-B6F6-4B9E-A5DB-37D67D0C8996}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficLight", "TrafficLight\TrafficLight.csproj", "{679CD194-B03C-4D32-B813-3E17100659E3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficLightContract", "TrafficLightContract\TrafficLightContract.csproj", "{7684E111-9935-424A-8443-DFB9B4D7952B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmContract", "FarmContract\FarmContract.csproj", "{A2D229F6-AC7E-42DF-95F6-FB00FCC243E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farm", "Farm\Farm.csproj", "{E683D623-7371-460F-8ED0-EC97F3302049}"

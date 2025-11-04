@@ -47,9 +47,9 @@ class FarmService
 	private FarmLogic logic = new FarmLogic();
 
 
-	// /// <summary>
-	// /// Constructor.
-	// /// </summary>
+	/// <summary>
+	/// Constructor.
+	/// </summary>
 	public FarmService()
 	{
 		//connect to the RabbitMQ message broker
@@ -89,7 +89,7 @@ class FarmService
 					)
 				);
 
-			log.Info($"Received message: Action={request.Action}, Data={request.Data}");
+			//log.Info($"Received message: Action={request.Action}, Data={request.Data}");
 
 			//set response as undefined by default
 			RPCMessage response = null;
@@ -100,7 +100,7 @@ class FarmService
 				case "SubmitFood":
 				{
 					var args = JsonConvert.DeserializeAnonymousType(request.Data, new {amount = 0});
-					log.Info($"Processing SubmitFood with amount: {args.amount}");
+					//log.Info($"Processing SubmitFood with amount: {args.amount}");
 
 					response = new RPCMessage() {
 						Action = "SubmitFoodResponse",
@@ -115,7 +115,7 @@ class FarmService
 				case "SubmitWater":
 				{
 					var args = JsonConvert.DeserializeAnonymousType(request.Data, new {amount = 0});
-					log.Info($"Processing SubmitWater with amount: {args.amount}");
+					//log.Info($"Processing SubmitWater with amount: {args.amount}");
 
 					response = new RPCMessage() {
 						Action = "SubmitWaterResponse",
@@ -149,7 +149,7 @@ class FarmService
 					body: Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(response))
 				);
 
-				log.Info($"Sent response: {response.Action}");
+				// log.Info($"Sent response: {response.Action}");
 			}
 		}
 		catch( Exception e )
